@@ -1,2 +1,3 @@
-# to-do-app
-To-do app implemented using React and Express JS
+# To-Do App
+
+A basic to-do app implemented using React + Vite frontend and Express JS backend
