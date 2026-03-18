@@ -5,6 +5,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Login from "./components/Login.tsx";
 import Register from "./components/Register.tsx";
 import UserLayout from "./components/UserLayout.tsx";
+import { TokenProvider } from "./tokenContext.tsx";
 
 const router = createBrowserRouter([
   {
@@ -36,7 +37,11 @@ const router = createBrowserRouter([
 ]);
 
 createRoot(document.getElementById("root")!).render(
-  <StrictMode>
-    <RouterProvider router={router} />
-  </StrictMode>,
+  <>
+    <TokenProvider>
+      <StrictMode>
+        <RouterProvider router={router} />
+      </StrictMode>
+    </TokenProvider>
+  </>,
 );
